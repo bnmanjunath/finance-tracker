@@ -6,7 +6,14 @@ class UserStocksController < ApplicationController
 			stock.save
 		end
 		@user_stock = UserStock.create(user: current_user, stock: stock)
+<<<<<<< HEAD
 		flash[:success] = "#{@user_stock.stock.name} has been successfully added to your portfolio"
 		redirect_to my_portfolio_path
 	end
 end
+=======
+		flash[:success] = "Stock #{@user_stock.stock.name} was successfully added to portfolio"
+		redirect_to my_portfolio_path
+	end
+end
+>>>>>>> production
